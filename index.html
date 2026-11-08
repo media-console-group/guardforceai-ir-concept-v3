@@ -1,0 +1,902 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add('js')</script>
+<title>Guardforce AI Co., Limited (Nasdaq: GFAI) | Investor Relations Concept</title>
+<meta name="description" content="An independent design concept for the Guardforce AI (Nasdaq: GFAI) investor relations page. Not affiliated with Guardforce AI Co., Limited; the official IR site is https://ir.guardforceai.com/.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&amp;family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Martian+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+/* mc:tokens */
+:root{
+  /* palette.mjs --brand "accent=#ff5b00,deep=#2c2137" --strategy committed  (committed)
+     accent   #ff5b00 oklch(0.683 0.212 40.3)
+     deep     #2c2137 oklch(0.271 0.042 306.7)
+     measured: white on --accent-ink 7.60:1, --accent-ink on --paper 7.38:1, --text-mid on --tint 5.66:1 */
+  --H: 40.3; --Hn: 306.7;
+  --accent:        oklch(0.683 0.212 40.3); /* bright: fills on light stock; text only on dark where --check proves >= 4.5; real */
+  --accent-lo:     oklch(0.683 0.212 40.3 / 0.14);
+  --accent-lt:     oklch(0.86 0.078 40.3); /* bright accent ON dark surfaces */
+  --accent-ink:    oklch(0.46 0.143 40.3); /* TEXT, links, primary-button background */
+  --accent-ink-d:  oklch(0.40 0.124 40.3); /* hover */
+  --ink:           oklch(0.26 0.016 306.7); /* headings */
+  --deep:          oklch(0.25 0.034 306.7); /* permanently dark band */
+  --deep-2:        oklch(0.18 0.027 306.7); /* gravest band / footer */
+  --paper:         oklch(0.99 0.004 306.7);
+  --card:          oklch(0.996 0.002 306.7);
+  --tint:          oklch(0.965 0.018 40.3); /* .sec-tint band, concept note, card interiors */
+  --tint-2:        oklch(0.91 0.035 40.3); /* borders, ghost outlines, the darker of two light bands */
+  --text:          oklch(0.31 0.016 306.7);
+  --text-mid:      oklch(0.49 0.016 306.7);
+  --line:          oklch(0.30 0.010 306.7 / 0.13);
+  --line-d:        oklch(0.98 0.010 40.3 / 0.14);
+  /* surface-slot defaults (foundation surface block); retune in surface.css */
+  --sheet-edge:    oklch(0.40 0.124 40.3 / 0.26);
+  --blind:         oklch(1.00 0.000 0 / 0.5);
+  --blind-k:       oklch(1.00 0.000 0 / 0.85);
+  --sheet-neg:     oklch(0.98 0.010 40.3 / 0.05);
+  --serif:         'Poppins', system-ui, sans-serif;
+  --sans:          'Public Sans', system-ui, sans-serif;
+  --mono:          'Martian Mono', ui-monospace, monospace;
+  --wrap: 1140px; --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* mc:substrate 9576b9be1505 */
+/* mediaconsole substrate: inlined by scripts/scaffold.mjs, identical on every page. Never edit or retype it;
+   override in page/layer.css or page/surface.css (both load after it). Band: all. Hue-parametric: colours are
+   tokens or oklch(... var(--Hn)). Integrity: opaque nav, content visible without JS, print and forced-colors safe. */
+:where(:root){--wrap:1140px;--ease:cubic-bezier(0.22, 1, 0.36, 1)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;scroll-padding-top:88px}
+body{font-family:var(--sans);color:var(--text);background:var(--paper);font-size:16px;line-height:1.6;overflow-x:hidden}
+a{color:inherit;text-decoration:none} img,svg{display:block;max-width:100%} button{font:inherit;cursor:pointer}
+::selection{background:var(--accent-lt);color:var(--deep)}
+:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px;border-radius:2px}
+.sec-dark :focus-visible,.snapshot :focus-visible,footer :focus-visible{outline-color:var(--accent-lt)}
+.wrap{width:min(var(--wrap),100% - 44px);margin-inline:auto}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:12px;top:-60px;z-index:200;background:var(--deep);color:#fff;padding:10px 16px;border-radius:6px;font-size:.85rem;transition:top .2s var(--ease)}
+.skip-link:focus{top:12px}
+.concept-note{background:var(--tint);color:var(--accent-ink-d);font-size:.78rem;text-align:center;padding:8px 16px;position:relative;z-index:101}
+.concept-note a{color:inherit;font-weight:600;text-decoration:underline}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-.01em;color:var(--ink)}
+h1{font-size:clamp(2.35rem,5.3vw,4rem)} h2{font-size:clamp(1.7rem,3.4vw,2.5rem)} h3{font-size:clamp(1.15rem,2vw,1.4rem)}
+p{max-width:68ch}
+.eyebrow{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-ink);display:inline-flex;align-items:center;gap:9px;margin-bottom:16px}
+.eyebrow::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none}
+.lead{font-size:clamp(1.08rem,1.7vw,1.3rem);line-height:1.55;color:var(--text-mid)}
+/* four house buttons: primary + ghost on light stock, primary-light + ghost-light on dark stock.
+   Text on dark uses --accent-lt, never --accent (D16: --accent may be a mid-L real brand colour; it is a fill). */
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:11px 22px;border-radius:8px;font-family:var(--sans);font-size:.82rem;font-weight:600;letter-spacing:.02em;border:1.5px solid transparent;background:transparent;transition:background .2s var(--ease),border-color .2s var(--ease),color .2s var(--ease),transform .2s var(--ease)}
+.btn:hover{transform:translateY(-1px)} .btn .arw{font-family:var(--mono);transition:transform .2s var(--ease)} .btn:hover .arw{transform:translateX(3px)}
+.btn-primary{background:var(--accent-ink);color:#fff} .btn-primary:hover{background:var(--accent-ink-d)}
+.btn-ghost{border-color:var(--tint-2);color:var(--accent-ink)} .btn-ghost:hover{background:var(--tint);border-color:var(--accent-ink)}
+.btn-primary-light{background:var(--accent-lt);color:var(--deep)} .btn-primary-light:hover{background:var(--tint)}
+.btn-ghost-light{border-color:oklch(0.98 0.01 var(--Hn)/.4);color:#fff} .btn-ghost-light:hover{background:oklch(0.98 0.01 var(--Hn)/.1)}
+/* nav: opaque by rule (no translucency, no blur); markup is emitted by scaffold.mjs from page.json */
+.site-nav{position:sticky;top:0;z-index:100;background:var(--paper);border-bottom:1px solid var(--line);transition:box-shadow .3s var(--ease)}
+.site-nav.scrolled{box-shadow:0 6px 24px oklch(0.3 0.02 var(--Hn)/.07)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:20px}
+.nav-brand{display:flex;align-items:center;gap:12px;min-height:44px;min-width:0}
+.nav-logo{display:flex;align-items:center;flex:none}
+.nav-logo img{height:26px;width:auto}
+.nav-name{font-family:var(--serif);font-size:1.2rem;line-height:1.1;color:var(--ink)}
+.nav-tick{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;color:var(--text-mid);border:1px solid var(--line);border-radius:5px;padding:4px 8px}
+.nav-links{display:flex;align-items:center;gap:24px;list-style:none}
+.nav-links a:not(.btn){font-size:.86rem;font-weight:500;color:var(--text-mid);transition:color .2s var(--ease)}
+.nav-links a:not(.btn):hover{color:var(--accent-ink)}
+.nav-links a.active{color:var(--ink);text-decoration:underline;text-underline-offset:7px;text-decoration-color:var(--accent);text-decoration-thickness:2px}
+.nav-burger{display:none;flex-direction:column;gap:5px;width:44px;height:44px;align-items:center;justify-content:center;background:none;border:none}
+.nav-burger span{width:22px;height:2px;background:var(--ink);border-radius:2px;transition:transform .25s var(--ease),opacity .2s}
+.nav-burger[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.nav-burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+/* bands: FLAT FILLS, the floor only; page/surface.css must override them (verify FAILs flat pages) */
+main{display:block;overflow-x:clip}   /* a translated reveal or wide motif can never widen the page */
+main>section{padding:clamp(56px,8vw,104px) 0}
+.sec-white{background:var(--paper)} .sec-tint{background:var(--tint)}
+.sec-dark{background:var(--deep);color:oklch(0.9 0.008 var(--Hn))}
+.sec-dark h1,.sec-dark h2,.sec-dark h3{color:#fff} .sec-dark .eyebrow{color:var(--accent-lt)} .sec-dark .eyebrow::before{background:var(--accent)}
+.sec-dark .lead{color:oklch(0.86 0.01 var(--Hn))}
+.sec-head{max-width:660px;margin-bottom:clamp(36px,5vw,56px)} .sec-head p{margin-top:14px}
+/* data sits on its own plate: table.fin cells are transparent, never paint a band behind figures */
+.table-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+table.fin{width:100%;border-collapse:collapse;min-width:540px;font-size:.92rem}
+table.fin caption{text-align:left;font-family:var(--mono);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;color:var(--text-mid);padding:14px 20px;border-bottom:1px solid var(--line);background:var(--card)}
+table.fin th,table.fin td{text-align:left;padding:14px 20px;border-bottom:1px solid var(--line)}
+table.fin tbody tr:last-child td{border-bottom:none}
+table.fin td.num{font-family:var(--mono);text-align:right;color:var(--ink);font-weight:500}
+table.fin thead th{font-weight:700;color:var(--ink);background:var(--card)}
+footer{background:var(--deep);color:oklch(0.76 0.008 var(--Hn));padding:56px 0 28px}
+.fls{padding:32px 0 0;font-size:.78rem;line-height:1.7;color:oklch(0.68 0.008 var(--Hn));max-width:98ch} .fls b{color:oklch(0.85 0.01 var(--Hn))}
+.fls a{color:inherit;text-decoration:underline} .fls+.fls{padding-top:14px}
+.market-note{padding-top:18px;margin-top:18px;border-top:1px solid var(--line-d);font-size:.72rem;line-height:1.7;color:oklch(0.68 0.008 var(--Hn))}
+/* reveal: hidden only once motion.js has set html.js, so no-JS and JS failure show everything.
+   Direction variants set --reveal-from (components/motion-extra.css); stagger with style="--d:.08s". */
+.reveal{transition:opacity .65s var(--ease),transform .65s var(--ease);transition-delay:var(--d,0s)}
+.js .reveal:not(.in){opacity:0;transform:var(--reveal-from,translateY(20px))}
+/* motif pause: motion.js toggles .paused on #hero-motif off-screen, in a hidden tab, or via [data-motif-toggle] */
+.paused,.paused::before,.paused::after,.paused *,.paused *::before,.paused *::after{animation-play-state:paused!important}
+@media (max-width:900px){
+  .nav-burger{display:flex}
+  .nav-links{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:flex-start;gap:2px;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 22px 20px;opacity:0;transform:translateY(-10px);visibility:hidden;pointer-events:none;transition:opacity .28s var(--ease),transform .28s var(--ease),visibility .28s;box-shadow:0 16px 30px oklch(0.3 0.02 var(--Hn)/.08)}
+  .nav-links.open{opacity:1;transform:none;visibility:visible;pointer-events:auto}
+  .nav-links li{width:100%} .nav-links a:not(.btn){display:block;padding:12px 0} .nav-links .btn{margin-top:10px;display:inline-flex}
+}
+@media (max-width:768px){ .footer-links a,.contact-col a{min-height:44px;display:flex;align-items:center} }   /* 44px tap targets; (0,1,1) so layer.css can restyle */
+@media (prefers-reduced-motion:reduce){
+  *{scroll-behavior:auto!important}
+  .reveal{transition:none} .js .reveal:not(.in){opacity:1;transform:none}
+  .btn:hover{transform:none} [class*="motif"]{animation:none!important} [data-motif-toggle]{display:none}
+}
+/* print (D12): decoration off, every reveal shown, dark bands re-inked dark-on-white (backgrounds may not print).
+   A custom dark band must carry .sec-dark so this, its focus ring and its heading colour all apply. */
+@media print{
+  *,*::before,*::after{background-image:none!important;box-shadow:none!important;text-shadow:none!important;animation:none!important;transition:none!important}
+  .site-nav{position:static} .nav-burger,.skip-link,[data-motif-toggle]{display:none!important}
+  .js .reveal:not(.in){opacity:1!important;transform:none!important}
+  .sec-dark,.sec-dark *,.hero,.hero *,.snapshot,.snapshot *,footer,footer *{background-color:transparent!important;color:#111!important;border-color:#bbb!important}
+  .sec-white,.sec-tint,.sec-dark,footer{background-color:#fff!important;border-top:1px solid #bbb}
+  .btn{background:transparent!important;color:#111!important;border-color:#111!important}
+  .table-scroll{overflow:visible;background:#fff!important}
+  main>section{padding:28px 0}
+}
+/* forced colors: the UA repaints every band to Canvas, so bands get a system seam instead */
+@media (forced-colors:active){
+  .sec-white,.sec-tint,.sec-dark,footer{background-image:none;border-top:1px solid CanvasText}
+  .btn{border-color:ButtonText}
+  .nav-burger span{forced-color-adjust:none;background:CanvasText}
+  .table-scroll{border-color:CanvasText}
+}
+/* mc:nav (computed: the listing chip stops fitting beside logo + burger) */
+@media (max-width:329px){.nav-tick{display:none}}
+/* mc:component timeline */
+/* timeline: E7 press and filings timeline grouped by year, newest first. Band: light (.sec-white / .sec-tint).
+   Integrity: every href is a URL you observed (no constructed detail pages; fall back to the news index or EDGAR);
+   headlines exactly as filed. Sticky year top:96px clears the 72px nav. */
+.news-year{display:grid;grid-template-columns:96px 1fr;gap:0 24px;align-items:start;border-top:1px solid var(--line);padding:22px 0 0;margin-top:22px}
+.news-year:first-child{border-top:none;padding:0;margin-top:0}
+.news-yr{position:sticky;top:96px;font-family:var(--mono);font-size:.9rem;font-weight:600;color:var(--text-mid)}
+.news-list{list-style:none;display:grid}
+.news-item{display:grid;grid-template-columns:118px 1fr auto;gap:4px 18px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.news-item:last-child{border-bottom:none}
+.news-item time{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--text-mid)}
+.news-link{display:flex;align-items:center;gap:8px;min-height:44px;font-size:1rem;color:var(--ink);transition:color .2s var(--ease)}
+.news-link:hover{color:var(--accent-ink)}
+.news-link .arw{font-family:var(--mono);transition:transform .2s var(--ease)}
+.news-link:hover .arw{transform:translateX(3px)}
+.news-tag{justify-self:start;font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-ink);background:var(--accent-lo);padding:4px 8px;border-radius:4px}
+@media (max-width:640px){
+  .news-year{grid-template-columns:1fr;gap:12px}
+  .news-yr{position:static}
+  .news-item{grid-template-columns:1fr;gap:2px;padding:10px 0}
+}
+/* mc:component contact */
+/* contact: E9 IR contact grid. Band: either (light default, .sec-dark variant).
+   Integrity: headings are h3, never h4 (verify FAILs any h4); omit any unverified row (phone, transfer agent); the
+   EDGAR link is the edgar placeholder. The substrate gives .contact-col a its 44px min-height at <=768px. */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:28px}
+.contact-col h3{font-family:var(--mono);font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.contact-col a,.contact-col p,.contact-col address{display:block;margin-top:12px;font-style:normal;font-size:.95rem;line-height:1.6;color:var(--text)}
+.contact-col a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--tint-2);transition:color .2s var(--ease)}
+.contact-col a:hover{color:var(--accent-ink);text-decoration-color:var(--accent)}
+.sec-dark .contact-col h3{color:var(--accent-lt)}
+.sec-dark .contact-col a,.sec-dark .contact-col p,.sec-dark .contact-col address{color:oklch(0.82 0.008 var(--Hn))}
+.sec-dark .contact-col a{text-decoration-color:var(--line-d)}
+.sec-dark .contact-col a:hover{color:#fff;text-decoration-color:var(--accent)}
+/* mc:layer */
+/* ===== Guardforce AI: visible layer. full-bleed-split: every major band is two full-height halves that alternate sides,
+   like the two doors of an armoured van. Orange (#ff5b00, real logo fill) is a whole half or the strap, never text on light. */
+body{font-size:16.5px}
+h1,h2,h3{font-weight:600;letter-spacing:-.025em}
+h1{font-size:clamp(2.1rem,4.4vw,3.55rem);line-height:1.06}
+h2{font-size:clamp(1.65rem,3.1vw,2.45rem);line-height:1.1}
+.nw{white-space:nowrap}
+.mono{font-family:var(--mono)}
+.site-nav .brand img{height:30px;width:auto}
+
+/* provenance: a tag says what kind of statement it is, the link says which filing */
+.tg{display:inline-block;font-family:var(--mono);font-size:.56rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:2px 6px 1px;border-radius:3px;vertical-align:.12em;white-space:nowrap}
+.tg-f{background:var(--accent-lo);color:var(--accent-ink)}
+.tg-cs{background:oklch(0.93 0.012 var(--Hn));color:oklch(0.36 0.03 var(--Hn))}
+.tg-c{background:oklch(0.93 0.03 160);color:oklch(0.36 0.07 160)}
+.tg-s{background:oklch(0.94 0.004 var(--Hn));color:oklch(0.40 0.01 var(--Hn))}
+a.src{font-family:var(--mono);font-size:.66rem;letter-spacing:.02em;color:var(--accent-ink);text-decoration:underline;text-underline-offset:2px;text-decoration-color:var(--tint-2);white-space:nowrap}
+a.src:hover{text-decoration-color:var(--accent-ink)}
+.on-dark .tg-f,.sec-dark .tg-f,.grave .tg-f{background:oklch(0.98 0.02 var(--H)/.12);color:var(--accent-lt)}
+.grave .tg-cs,.grave .tg-c,.on-dark .tg-cs,.sec-dark .tg-cs,.on-dark .tg-s,.sec-dark .tg-s,.on-dark .tg-c,.sec-dark .tg-c{background:oklch(0.98 0.01 var(--Hn)/.10);color:oklch(0.86 0.01 var(--Hn))}
+.on-dark a.src,.sec-dark a.src,.grave a.src{color:var(--accent-lt);text-decoration-color:oklch(0.98 0.02 var(--H)/.35)}
+
+/* ---------- the split primitive ---------- */
+.split{display:grid;grid-template-columns:1fr 1fr;padding:0;min-height:min(86vh,820px)}
+.split.flip > .half:first-child{order:2}
+.half{position:relative;padding:clamp(48px,7vw,104px) clamp(22px,5vw,72px);display:flex;flex-direction:column;justify-content:center;min-width:0}
+.half-in{width:100%;max-width:540px}
+.split:not(.flip) > .half:last-child .half-in{margin-right:auto}
+.split.flip > .half:last-child .half-in,.split:not(.flip) > .half:first-child .half-in{margin-left:auto}
+.half.photo{padding:0;overflow:hidden;background:var(--deep)}
+.half.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.half.photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:44px 22px 14px;font-family:var(--mono);font-size:.62rem;letter-spacing:.04em;line-height:1.5;color:#fff;background:linear-gradient(to top,oklch(0.16 0.03 var(--Hn)/.86),oklch(0.16 0.03 var(--Hn)/0))}
+.half.orange{background-color:var(--accent);color:var(--deep)}
+.half.orange h2,.half.orange h3{color:var(--deep)}
+.half.orange .eyebrow{color:var(--deep)} .half.orange .eyebrow::before{background:var(--deep)}
+.half.orange a.src{color:var(--deep);text-decoration-color:oklch(0.25 0.034 306.7/.45)}
+.half.orange .tg-f,.half.orange .tg-cs{background:oklch(0.25 0.034 306.7/.12);color:var(--deep)}
+.on-dark{background-color:var(--deep);color:oklch(0.88 0.01 var(--Hn))}
+.on-dark h1,.on-dark h2,.on-dark h3{color:#fff}
+.on-dark .eyebrow{color:var(--accent-lt)} .on-dark .eyebrow::before{background:var(--accent)}
+.on-dark .lead{color:oklch(0.84 0.012 var(--Hn))}
+.on-dark :focus-visible,.half.orange :focus-visible{outline-color:#fff}
+
+/* ---------- hero ---------- */
+.hero.split{min-height:min(92vh,860px)}
+.hero .half.photo img{object-position:38% 50%}
+.hero h1{margin-bottom:22px}
+.hero .lead{font-size:1.08rem;margin-bottom:18px}
+.hero-note{font-size:.9rem;line-height:1.65;color:oklch(0.80 0.012 var(--Hn));margin-bottom:28px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn-on-dark{background:var(--accent);color:var(--deep)} .btn-on-dark:hover{background:var(--accent-lt)}
+.btn-ghost-light{border-color:oklch(0.98 0.01 var(--H)/.4)}
+.hero-pause{font-size:.74rem}
+.hero-strap{margin-top:40px;position:relative;height:22px}
+.hero-strap svg{width:100%;height:22px;overflow:visible}
+.hero-strap .rule{stroke:oklch(0.98 0.02 var(--H)/.28);stroke-width:1}
+.hero-strap .run-motif{stroke:var(--accent);stroke-width:2;stroke-dasharray:46 1200;stroke-dashoffset:0;animation:strap-motif 9s linear infinite}
+#hero-motif.paused .run-motif,#hero-motif.user-paused .run-motif{animation-play-state:paused}
+.hero-strap text{font-family:var(--mono);font-size:7.5px;letter-spacing:.18em;fill:oklch(0.98 0.02 var(--H)/.46)}
+@keyframes strap-motif{from{stroke-dashoffset:0}to{stroke-dashoffset:-1246}}
+
+/* ---------- snapshot ---------- */
+.snap .half.orange .big{font-family:var(--serif);font-weight:600;font-size:clamp(3.4rem,8.4vw,6.6rem);line-height:.92;letter-spacing:-.04em;color:var(--deep);font-variant-numeric:tabular-nums}
+.snap .big-label{margin-top:16px;font-size:1.02rem;line-height:1.5;max-width:30ch}
+.snap .big-src{margin-top:16px;font-family:var(--mono);font-size:.66rem;letter-spacing:.06em;text-transform:uppercase}
+.figs{list-style:none;display:grid;gap:0}
+.figs li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 18px;padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.figs li:first-child{padding-top:0}
+.figs .f-num{font-family:var(--mono);font-size:clamp(1.15rem,2vw,1.45rem);font-weight:500;color:var(--ink);text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.figs .f-label{font-weight:600;color:var(--ink);font-size:.98rem}
+.figs .f-note{grid-column:1/-1;font-size:.84rem;color:var(--text-mid);line-height:1.55}
+
+/* ---------- overview ---------- */
+.ov-body p{margin-bottom:16px}
+.ov-body .lead{color:var(--text)}
+.lines{list-style:none;margin-top:26px;border-top:1px solid var(--line)}
+.lines li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:4px 14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.lines .no{font-family:var(--mono);font-size:.74rem;color:var(--accent-ink);padding-top:3px}
+.lines b{display:block;font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.04rem;letter-spacing:-.01em}
+.lines span.d{font-size:.9rem;color:var(--text-mid);line-height:1.55}
+.pull{margin-top:26px;padding:18px 20px;background:var(--card);border:1px solid var(--tint-2);border-radius:10px;font-size:.92rem;line-height:1.6}
+.pull .pull-h{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink);display:block;margin-bottom:6px}
+
+/* ---------- the strap (signature) ---------- */
+.strap-band .sec-head{max-width:760px}
+.strap{position:relative;margin:8px 0 18px}
+.strap-svg{width:100%;height:auto;display:block;overflow:visible}
+.strap-svg .body{fill:var(--accent)}
+.strap-svg .micro{font-family:var(--mono);font-size:5.2px;letter-spacing:.32em;fill:oklch(1 0 0/.62)}
+.strap-svg .edge{stroke:oklch(0.25 0.034 306.7/.55);stroke-width:1}
+.strap-svg .cut{stroke:var(--deep);stroke-width:1.4}
+.strap-svg .seg-l{font-family:var(--mono);font-size:10.5px;fill:var(--deep);font-weight:500}
+.strap-svg .seg-v{font-family:var(--serif);font-size:15px;font-weight:600;fill:var(--deep)}
+.strap-svg .lead-l{stroke:var(--deep);stroke-width:1}
+.strap-svg .call-l{font-family:var(--mono);font-size:10.5px;fill:var(--ink)}
+.strap-svg .call-v{font-family:var(--mono);font-size:10.5px;font-weight:600;fill:var(--ink)}
+.strap-svg .seal-ring{fill:var(--paper);stroke:var(--deep);stroke-width:1.2}
+.strap-svg .seal-t{font-family:var(--mono);font-size:6.4px;letter-spacing:.14em;fill:var(--deep)}
+.strap-cap{font-size:.86rem;color:var(--text-mid);line-height:1.6;max-width:80ch}
+.strap-table{margin-top:28px}
+table.fin.seg{min-width:600px}
+table.fin.seg td.share{font-family:var(--mono);text-align:right;color:var(--text-mid)}
+.geo{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:16px;margin-top:30px}
+.geo-c{background:var(--card);border:1px solid var(--tint-2);border-radius:10px;padding:18px 18px 16px}
+.geo-c .g-k{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.geo-c .g-v{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--ink);margin:6px 0 4px;letter-spacing:-.02em}
+.geo-c p{font-size:.84rem;color:var(--text-mid);line-height:1.55}
+
+/* ---------- platform ---------- */
+.layers{list-style:none;counter-reset:ly;margin-top:24px}
+.layers li{position:relative;padding:18px 0 18px 58px;border-top:1px solid var(--line)}
+.layers li:last-child{border-bottom:1px solid var(--line)}
+.layers li::before{counter-increment:ly;content:'0' counter(ly);position:absolute;left:0;top:17px;font-family:var(--mono);font-size:.76rem;font-weight:500;color:var(--deep);background:var(--accent);border-radius:4px;padding:4px 7px}
+.layers b{display:block;font-family:var(--serif);font-weight:600;color:var(--ink);font-size:1.06rem}
+.layers .sub{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--accent-ink);display:block;margin:2px 0 6px}
+.layers p{font-size:.9rem;color:var(--text-mid);line-height:1.6}
+.diffs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:1px;background:var(--tint-2);border:1px solid var(--tint-2);border-radius:12px;overflow:hidden;margin-top:clamp(36px,5vw,56px)}
+.diff{background:var(--card);padding:22px 22px 20px;transition:background .25s var(--ease)}
+.diff:hover{background:var(--tint)}
+.diff .d-no{font-family:var(--mono);font-size:.72rem;color:var(--accent-ink)}
+.diff h3{font-size:1.08rem;margin:10px 0 8px}
+.diff p{font-size:.88rem;color:var(--text-mid);line-height:1.6}
+
+/* ---------- read first (gravest) ---------- */
+.grave{background-color:var(--deep-2);color:oklch(0.86 0.01 var(--Hn))}
+.grave h2,.grave h3{color:#fff}
+.grave .eyebrow{color:var(--accent-lt)}
+.grave .sec-head p{color:oklch(0.82 0.012 var(--Hn))}
+.flags{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px}
+.flag{border:1px solid oklch(0.98 0.02 var(--H)/.16);border-radius:12px;padding:22px 22px 20px;background:oklch(0.98 0.02 var(--H)/.03)}
+.flag .fl-k{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-lt)}
+.flag h3{font-size:1.1rem;margin:8px 0 10px;line-height:1.25}
+.flag p{font-size:.88rem;line-height:1.65;color:oklch(0.84 0.01 var(--Hn))}
+.flag p + p{margin-top:10px}
+.flag q{quotes:'\201C' '\201D'}
+
+/* ---------- financials ---------- */
+table.fin.is{min-width:680px}
+table.fin th[scope=row]{font-weight:500;color:var(--text);width:40%}
+table.fin tr.tot th,table.fin tr.tot td{font-weight:700;color:var(--ink)}
+table.fin tr.sub th{padding-left:34px;color:var(--text-mid);font-weight:400}
+table.fin td.num.neg{color:var(--ink)}
+table.fin thead th.num{text-align:right;font-family:var(--mono);font-size:.74rem;letter-spacing:.04em}
+.fin-notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:22px;margin-top:28px}
+.fin-notes p{font-size:.88rem;color:var(--text-mid);line-height:1.65}
+.fin-notes b{color:var(--ink)}
+
+/* ---------- contact split ---------- */
+.contact.split{min-height:0}
+.contact .half.orange .half-in h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
+.contact .half.orange p{max-width:42ch;margin-top:14px}
+.contact .btn-deep{background:var(--deep);color:#fff;margin-top:26px} .contact .btn-deep:hover{background:var(--deep-2)}
+.contact-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))}
+
+/* ---------- footer ---------- */
+footer{background-color:var(--deep-2)}
+.foot-brand{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.foot-brand img{height:28px;width:auto}
+.footer-links{list-style:none;display:flex;flex-wrap:wrap;gap:6px 22px;margin-bottom:8px}
+.footer-links a{font-size:.84rem;color:oklch(0.86 0.01 var(--Hn));text-decoration:underline;text-underline-offset:3px;text-decoration-color:oklch(0.98 0.02 var(--H)/.3)}
+.footer-links a:hover{color:#fff}
+.method{font-size:.78rem;line-height:1.7;color:oklch(0.74 0.01 var(--Hn));max-width:98ch;padding-top:18px}
+
+@media (max-width:900px){
+  .split,.hero.split{grid-template-columns:minmax(0,1fr);min-height:0}
+  .split.flip > .half:first-child{order:0}
+  .half.photo{aspect-ratio:4/3}
+  .hero .half.photo{aspect-ratio:3/2}
+  .half-in{max-width:none}
+}
+@media (max-width:640px){
+  .strap-svg .lbl,.strap-svg g,.strap-svg .lead-l{display:none}
+  table.fin th[scope=row]{min-width:168px}
+  .figs li{grid-template-columns:minmax(0,1fr)}
+  .figs .f-num{text-align:left}
+  .lines li{grid-template-columns:34px minmax(0,1fr)}
+}
+@media print{
+  .on-dark,.grave,.half.orange{background:#fff!important;color:#000!important}
+  .on-dark *,.grave *,.half.orange *{color:#000!important}
+}
+/* mc:surface */
+/* ===== Guardforce AI surface system: banknote microprint, derived from the strap (the signature).
+   Every stock is a different print of the same security sheet: printed dark on white, BLIND WHITE on the orange tint,
+   white microprint on the orange halves (it LIGHTENS the orange, so ink-on-orange contrast only rises), negative on the ink.
+   Layer order on light stock: washes FIRST (on top), ruling next, trim rules LAST (under). */
+:root{
+  --sheet-edge: oklch(0.40 0.124 40.3 / 0.26);   /* trim rules: 11px inside each band edge, the gutter only */
+  --blind:      oklch(1 0 0 / 0.55);              /* blind guilloche on tint stock */
+  --blind-k:    oklch(1 0 0 / 0.85);
+  --sheet-neg:  oklch(0.98 0.010 40.3 / 0.05);    /* negative print on ink stock */
+  /* guilloche tiles: two interlaced sine strands per tile; percent-encoded, no url(#id) inside */
+  --gl-blind: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.62' stroke-width='.8'%3E%3Cpath d='M0 14C12 2 36 2 48 14S84 26 96 14'/%3E%3Cpath d='M0 14C12 26 36 26 48 14S84 2 96 14'/%3E%3C/g%3E%3C/svg%3E");
+  --gl-micro: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='18'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.30' stroke-width='.7'%3E%3Cpath d='M0 9C8 1 24 1 32 9S56 17 64 9'/%3E%3Cpath d='M0 9C8 17 24 17 32 9S56 1 64 9'/%3E%3C/g%3E%3C/svg%3E");
+  --gl-neg:   url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='28'%3E%3Cg fill='none' stroke='%23fff3ec' stroke-opacity='.075' stroke-width='.8'%3E%3Cpath d='M0 14C12 2 36 2 48 14S84 26 96 14'/%3E%3Cpath d='M0 14C12 26 36 26 48 14S84 2 96 14'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* WHITE stock: head wash (orange tint fading out by 260px), then the two strap-edge hairlines at the band head,
+   then the printed trim rules. The hairlines sit at 18px and 22px from the top, inside the section padding
+   (clamp(56px,8vw,104px)), where no glyph can land: printed weight is licensed there. */
+.sec-white{
+  background-color:var(--paper);
+  background-image:
+    linear-gradient(to bottom, var(--tint) 0, oklch(0.99 0.004 306.7 / 0) 260px),
+    linear-gradient(to right, transparent 22px, oklch(0.40 0.124 40.3 / .30) 22px, oklch(0.40 0.124 40.3 / .30) calc(100% - 22px), transparent calc(100% - 22px)),
+    linear-gradient(to right, transparent 22px, oklch(0.40 0.124 40.3 / .16) 22px, oklch(0.40 0.124 40.3 / .16) calc(100% - 22px), transparent calc(100% - 22px)),
+    linear-gradient(var(--sheet-edge), var(--sheet-edge)),
+    linear-gradient(var(--sheet-edge), var(--sheet-edge));
+  background-size: 100% 260px, 100% 1px, 100% 1px, 1px 100%, 1px 100%;
+  background-position: 0 0, 0 18px, 0 22px, 11px 0, calc(100% - 11px) 0;
+  background-repeat:no-repeat;
+}
+
+/* TINT stock: a soft head-to-foot tint step on top, then BLIND WHITE guilloche (white lifts contrast on the tint:
+   text-mid on tint 5.66, on tint+blind 5.97), then white trim rules. Do not swap the guilloche to a dark stroke. */
+.sec-tint{
+  background-color:var(--tint);
+  background-image:
+    linear-gradient(to bottom, oklch(0.94 0.03 40.3 / .55) 0, oklch(0.965 0.018 40.3 / 0) 180px),
+    var(--gl-blind),
+    linear-gradient(oklch(1 0 0 / .8), oklch(1 0 0 / .8)),
+    linear-gradient(oklch(1 0 0 / .8), oklch(1 0 0 / .8));
+  background-size: 100% 180px, 96px 28px, 1px 100%, 1px 100%;
+  background-position: 0 0, calc(50% + 48px) 0, 11px 0, calc(100% - 11px) 0;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat;
+}
+
+/* ORANGE halves: white microprint over the real orange, plus a corner burn of the deeper orange (#e45513, the favicon's
+   own tone) at the far edge, away from the text column. Deep text on bare orange 5.19:1; white strands only raise it. */
+.half.orange{
+  background-image:
+    radial-gradient(120% 90% at 100% 100%, oklch(0.63 0.19 40 / .55) 0, oklch(0.63 0.19 40 / 0) 60%),
+    var(--gl-micro),
+    linear-gradient(oklch(0.25 0.034 306.7 / .22), oklch(0.25 0.034 306.7 / .22));
+  background-size: 100% 100%, 64px 18px, 1px 100%;
+  background-position: 0 0, 0 0, calc(100% - 11px) 0;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+.split.flip .half.orange{background-position:0 0, 0 0, 11px 0}
+
+/* INK stock (hero half, read-first band, footer): negative guilloche at 7.5% plus a low brand field at the head. */
+.on-dark,.sec-dark{
+  background-image:
+    radial-gradient(90% 60% at 0% 0%, oklch(0.683 0.212 40.3 / .10) 0, oklch(0.683 0.212 40.3 / 0) 70%),
+    var(--gl-neg),
+    linear-gradient(var(--sheet-neg), var(--sheet-neg));
+  background-size: 100% 100%, 96px 28px, 1px 100%;
+  background-position: 0 0, 0 0, calc(100% - 11px) 0;
+  background-repeat: no-repeat, repeat, no-repeat;
+}
+
+/* GRAVEST band: its own stock. Darkest ink, NO brand field, and the only diagonal on the page: a tamper-tape hatch
+   confined to the top 10px seam, where no text can sit. */
+.grave{
+  background-color:var(--deep-2);
+  background-image:
+    repeating-linear-gradient(135deg, oklch(0.683 0.212 40.3 / .55) 0 8px, transparent 8px 16px),
+    var(--gl-neg),
+    linear-gradient(oklch(0.98 0.010 40.3 / .07), oklch(0.98 0.010 40.3 / .07)),
+    linear-gradient(oklch(0.98 0.010 40.3 / .07), oklch(0.98 0.010 40.3 / .07));
+  background-size: 100% 6px, 96px 28px, 1px 100%, 1px 100%;
+  background-position: 0 0, 0 0, 11px 0, calc(100% - 11px) 0;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat;
+}
+footer{
+  background-image:var(--gl-neg), linear-gradient(to bottom, oklch(0.683 0.212 40.3 / .06), oklch(0.683 0.212 40.3 / 0) 140px);
+  background-size:96px 28px, 100% 140px;
+  background-repeat:repeat, no-repeat;
+}
+
+.table-scroll{background:var(--card)}   /* table cells are transparent; never paint a band behind data */
+.geo-c,.pull,.diff{background-color:var(--card)}
+@media print{
+  .sec-white,.sec-tint,.sec-dark,.on-dark,.grave,.half.orange,footer{background-image:none}
+  .grave,.on-dark{background-color:#fff!important;color:#000!important}
+  .grave *{color:#000!important}
+}
+@media (forced-colors:active){
+  /* background-image is dropped; bands fall back to Canvas and the 1px borders on cards and tables carry structure */
+  .half.orange,.on-dark,.grave{forced-color-adjust:auto}
+}
+.fs-more{margin-top:clamp(18px,3vw,32px);border-top:1px solid var(--tint-2)}
+.fs-more>summary{cursor:pointer;list-style:none;display:flex;flex-direction:column;gap:4px;padding:16px 0;min-height:44px}
+.fs-more>summary::-webkit-details-marker{display:none}
+.fs-more>summary>span:first-child{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.fs-more>summary>span:first-child::after{content:"  +";font-weight:700}
+.fs-more[open]>summary>span:first-child::after{content:"  \2212"}
+.fs-more .fs-s{font-size:.88rem;color:var(--text-mid)}
+.fs-more>summary:focus-visible{outline:2px solid var(--accent-ink);outline-offset:3px}
+.fs-in>*+*{margin-top:14px}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="concept-note">Independent design concept. Not affiliated with Guardforce AI Co., Limited. Official investor relations: <a href="https://ir.guardforceai.com/" target="_blank" rel="noopener">ir.guardforceai.com</a></div>
+
+<header class="site-nav">
+  <div class="wrap nav-inner">
+    <a class="nav-brand" href="#hero"><span class="nav-logo"><img src="img/logo.png" alt="Guardforce AI" width="508" height="152"></span><span class="nav-tick">Nasdaq: GFAI</span></a>
+    <nav aria-label="Primary">
+      <button class="nav-burger" id="nav-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#company">Company</a></li>
+        <li><a href="#revenue">Revenue</a></li>
+        <li><a href="#financials">Financials</a></li>
+        <li><a href="#filings">News</a></li>
+        <li><a href="#disclosures">Disclosures</a></li>
+        <li><a class="btn btn-primary" href="#contact">Contact IR <span class="arw" aria-hidden="true">-&gt;</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+
+<!-- ============ 00 HERO: split. Left: the company's own photograph of its GFCS cash-in-transit vans. Right: ink half. ============ -->
+<section id="hero" class="hero split" aria-labelledby="hero-h">
+  <figure class="half photo">
+    <img src="img/convoy.jpg" width="1600" height="1067" alt="A line of white GFCS armoured cash-in-transit pickups parked outside a cash centre loading bay." fetchpriority="high">
+    <figcaption>GFCS cash-in-transit vehicles. Company photograph, guardforceai.com secured logistics page.</figcaption>
+  </figure>
+  <div class="half on-dark">
+    <div class="half-in">
+      <p class="eyebrow"><span><span class="nw">Guardforce AI Co., Limited</span> &middot; <span class="nw">Nasdaq: GFAI</span> &middot; <span class="nw">Singapore</span></span></p>
+      <h1 id="hero-h">AI-driven technology, built on 43 years of secured logistics.</h1>
+      <p class="lead">&ldquo;Guardforce AI is an AI-driven technology company with over 43 years of growth and leadership experience in the secured logistics and retail sectors in Thailand and across the Asia-Pacific region.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+      <p class="hero-note">Revenue from continuing operations was $35.2M in 2025, up 8% on 2024 as restated <span class="tg tg-c">Computed</span> <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a>; first-half 2026 revenue rose 6.4% <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a>; cash and equivalents were $21.3M at Jun 30, 2026. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></p>
+      <div class="hero-cta">
+        <a class="btn btn-on-dark" href="https://ir.guardforceai.com/" target="_blank" rel="noopener">Explore the investor site <span class="arw" aria-hidden="true">&nearr;</span></a>
+        <a class="btn btn-ghost-light" href="#financials">Explore the results <span class="arw" aria-hidden="true">&darr;</span></a>
+        <button class="btn btn-ghost-light hero-pause" type="button" data-motif-toggle aria-pressed="false">Pause motion</button>
+      </div>
+      <div id="hero-motif" class="hero-strap" aria-hidden="true">
+        <svg viewBox="0 0 600 22" preserveAspectRatio="none">
+          <line class="rule" x1="0" y1="4" x2="600" y2="4"/>
+          <line class="rule" x1="0" y1="18" x2="600" y2="18"/>
+          <line class="run-motif" x1="0" y1="11" x2="600" y2="11"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 01 SNAPSHOT: split. Orange half carries the one headline figure; paper half the rest, each dated. ============ -->
+<section id="snapshot" class="snap split" aria-labelledby="snap-h">
+  <div class="half orange">
+    <div class="half-in">
+      <p class="eyebrow">Revenue, year ended Dec 31, 2025</p>
+      <h2 id="snap-h" class="big">$35.2M</h2>
+      <p class="big-label">From continuing operations, up from $32.6M in 2024 as restated to show Beijing Wanjia and Handshake as discontinued operations. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+      <p class="big-src">20-F for 2025, audited by PKF Littlejohn LLP</p>
+    </div>
+  </div>
+  <div class="half sec-white">
+    <div class="half-in">
+      <ul class="figs">
+        <li class="reveal" style="--d:.02s"><span class="f-label">Revenue, six months to Jun 30, 2026</span><span class="f-num">$18,270,590</span><span class="f-note">Up 6.4% from $17,168,005 (restated) a year earlier. Unaudited. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></span></li>
+        <li class="reveal" style="--d:.06s"><span class="f-label">Gross profit, year ended Dec 31, 2025</span><span class="f-num">$5,285,668</span><span class="f-note">Up 7.5% from $4,916,141 in 2024 as restated. <span class="tg tg-c">Computed</span> <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></span></li>
+        <li class="reveal" style="--d:.10s"><span class="f-label">Cash and cash equivalents, Jun 30, 2026</span><span class="f-num">$21,250,627</span><span class="f-note">$24,545,290 at Dec 31, 2025; restricted cash of $2,476,766 is separate. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></span></li>
+        <li class="reveal" style="--d:.14s"><span class="f-label">Smart Cash Solution revenue, 2025</span><span class="f-num">$4,441,192</span><span class="f-note">Up 13.9% from $3,899,564; $2,288,577 in the first half of 2026, up 5.2%. <span class="tg tg-c">Computed</span> <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 04 PLATFORM: split. Smart Cash photograph | the three layers in the company's words + differentiators. ============ -->
+<section id="platform" class="split" aria-labelledby="pl-h">
+  <figure class="half photo">
+    <img src="img/smart-cash.webp" width="1200" height="672" loading="lazy" alt="Three GFCS Smart Cash machines, green and white, standing in a bright retail interior.">
+    <figcaption>GFCS Smart Cash machines. Company image, guardforceai.com Smart Cash page.</figcaption>
+  </figure>
+  <div class="half sec-white">
+    <div class="half-in">
+      <p class="eyebrow">Platform and how it works</p>
+      <h2 id="pl-h">An AI platform, industry agents and robots as a service.</h2>
+      <p>The company&rsquo;s site says &ldquo;Our AI solutions are built on three interconnected layers.&rdquo; <span class="tg tg-s">Company site</span> The 20-F dates the first: &ldquo;The Guardforce AI Intelligent Cloud Platform (GFAI ICP) forms a foundation of our AI&amp;Robotics Solution since its launch in 2021.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+      <ol class="layers">
+        <li><b>AI infrastructure</b><span class="sub">Intelligent Cloud Platform (ICP)</span><p>Connects the company&rsquo;s AI agents and robots into one system that routes data and actions across deployments. <span class="tg tg-s">Company site</span></p></li>
+        <li><b>Multi-agent system</b><span class="sub">Industry-specialized AI agents</span><p>The site names travel, retail, education and banking. <span class="tg tg-s">Company site</span> The filed example is DVGO (DeepVoyage Go), a travel-planning agent: beta in April 2025, public in January 2026, sold by subscription. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></li>
+        <li><b>Robotics as a service</b><span class="sub">Sale and rental of robots</span><p>Robots sold outright or rented with technical support, including Wishnote for event sign-in and wish displays. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 COMPANY: split, flipped. Overview + problem framing on paper; the cash-processing photograph. ============ -->
+<section id="company" class="split flip" aria-labelledby="co-h">
+  <figure class="half photo">
+    <img src="img/cash-count.jpg" width="1200" height="800" loading="lazy" alt="A GFCS cash-processing employee squares a strapped bundle of Thai banknotes at a counting station.">
+    <figcaption>Cash processing at a GFCS centre. Company photograph, guardforceai.com secured logistics page.</figcaption>
+  </figure>
+  <div class="half sec-white">
+    <div class="half-in ov-body">
+      <p class="eyebrow">The established base</p>
+      <h2 id="co-h">Founded in 1982, serving Thailand&rsquo;s banks and retailers.</h2>
+      <p class="lead">&ldquo;GF Cash (CIT), Guardforce AI&rsquo;s legacy business, was incorporated in 1982 in Thailand and has been operating in the cash-in-transit, or CIT, industry since inception.&rdquo; <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+      <p>The listed company is a Cayman Islands holding company formed on April 20, 2018 to acquire that business; its principal office moved from Bangkok to Singapore in November 2021. The Thai subsidiary now trades under the GFCS brand. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+      
+      <ol class="lines">
+        <li><span class="no">01</span><div><b>Secured logistics</b><span class="d">Cash-in-transit for banks and retailers, dedicated vehicles, ATM management, cash processing and cash centres. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></span></div></li>
+        <li><span class="no">02</span><div><b>Smart Cash Solution</b><span class="d">Automated cash management machines for banks and retail clients; $4.4M of revenue in 2025, up 13.9%. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></span></div></li>
+        <li><span class="no">03</span><div><b>AI &amp; robotics</b><span class="d">Service robots sold or rented, the DVGO travel-planning AI agent, and Smart Retail Solution. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></span></div></li>
+        <li><span class="no">04</span><div><b>MGAI</b><span class="d">AI tools for speech therapy and rehabilitation, acquired Mar 11, 2026 for $300,000 and 5,000,000 restricted shares that vest on revenue targets; $200,056 of revenue to Jun 30. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026030839/ea0282340-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Mar 18, 2026</a></span></div></li>
+      </ol>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="sec-white diffs-band" aria-labelledby="df-h" style="padding-top:0">
+  <div class="wrap">
+    <h2 id="df-h" class="sr-only">What the company has that a start-up would not</h2>
+    <div class="diffs">
+      <div class="diff reveal" style="--d:.02s"><span class="d-no">01</span><h3>43 years of operating history</h3><p>GF Cash (CIT) has run cash-in-transit in Thailand since 1982. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></div>
+      <div class="diff reveal" style="--d:.06s"><span class="d-no">02</span><h3>A bank anchor to 2028</h3><p>Government Savings Bank renewed for three years, effective June 1, 2025 to May 31, 2028. The 20-F records the renewal both on January 28 and on June 23, 2025. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></div>
+      <div class="diff reveal" style="--d:.10s"><span class="d-no">03</span><h3>A route into retail</h3><p>Smart Retail Solution has been offered to existing Thai clients since 2024; the company says about 14 of its top 20 clients are retailers. <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></p></div>
+      <div class="diff reveal" style="--d:.14s"><span class="d-no">04</span><h3>Cash automation, growing</h3><p>Smart Cash Solution revenue rose from $3,899,564 to $4,441,192 in 2025 <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a>, and to $2,288,577 in H1 2026, up 5.2% <span class="tg tg-c">Computed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a>.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 03 THE STRAP (signature): revenue by service line, H1 2026, drawn as a banknote strap to scale. ============ -->
+<section id="revenue" class="strap-band sec-tint" aria-labelledby="rev-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Where the revenue comes from</p>
+      <h2 id="rev-h">Revenue by service line, six months to Jun 30, 2026.</h2>
+      <p>Each band of the strap is one service line, drawn to scale against the $18,270,590 total. The AI and robotics lines are the two ink bands at the right-hand end of the strap. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></p>
+    </div>
+    <figure class="strap reveal">
+      <svg class="strap-svg" viewBox="-4 0 1008 260" role="img" aria-labelledby="strap-t strap-d">
+<title id="strap-t">Revenue by service line, six months to June 30, 2026</title>
+<desc id="strap-d">Cash-in-transit, non-dedicated vehicles $6,699,793; ATM management $3,476,702; Cash processing $2,401,057; Smart Cash Solution $2,288,577; Cash-in-transit, dedicated vehicles $1,891,235; Cash centre operations $909,882; Consolidated cash centre $354,358; Others $7,259; Core AI &amp; robotics $226,737; Smart Retail Solution $14,990; total $18,270,590.</desc>
+<rect class="body" x="0" y="92" width="1000" height="58"/>
+<text class="micro" x="2" y="99">GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 </text><text class="micro" x="-30" y="147">GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 GFAI SECURED LOGISTICS H1 2026 US$18,270,590 </text>
+<text class="seg-v lbl" x="8.0" y="122">36.7%</text>
+<text class="seg-l lbl" x="8.0" y="138">CIT, non-dedicated</text>
+<line class="cut" x1="366.70" y1="92" x2="366.70" y2="150"/>
+<text class="seg-v lbl" x="374.7" y="122">19.0%</text>
+<text class="seg-l lbl" x="374.7" y="138">ATM management</text>
+<line class="cut" x1="556.99" y1="92" x2="556.99" y2="150"/>
+<text class="seg-v lbl" x="565.0" y="122">13.1%</text>
+<text class="seg-l lbl" x="565.0" y="138">Cash processing</text>
+<line class="cut" x1="688.40" y1="92" x2="688.40" y2="150"/>
+<text class="seg-v lbl" x="696.4" y="122">12.5%</text>
+<text class="seg-l lbl" x="696.4" y="138">Smart Cash</text>
+<line class="cut" x1="813.66" y1="92" x2="813.66" y2="150"/>
+<text class="seg-v lbl" x="821.7" y="122">10.4%</text>
+<text class="seg-l lbl" x="821.7" y="138">CIT, dedicated</text>
+<line class="cut" x1="917.18" y1="92" x2="917.18" y2="150"/>
+<line class="cut" x1="966.98" y1="92" x2="966.98" y2="150"/>
+<line class="cut" x1="986.37" y1="92" x2="986.37" y2="150"/>
+<rect x="986.77" y="92" width="12.41" height="58" fill="var(--deep)"/>
+<rect x="999.18" y="92" width="1.60" height="58" fill="var(--deep)"/>
+<polyline class="lead-l" fill="none" points="942.1,150 942.1,172 880,172"/>
+<text class="call-l lbl" x="872" y="176" text-anchor="end"><tspan class="call-v">$909,882 &#183; 5.0%</tspan>  Cash centre operations</text>
+<polyline class="lead-l" fill="none" points="976.7,150 976.7,196 880,196"/>
+<text class="call-l lbl" x="872" y="200" text-anchor="end"><tspan class="call-v">$354,358 &#183; 1.9%</tspan>  Consolidated cash centre</text>
+<polyline class="lead-l" fill="none" points="993.0,150 993.0,220 880,220"/>
+<text class="call-l lbl" x="872" y="224" text-anchor="end"><tspan class="call-v">$226,737 &#183; 1.2%</tspan>  Core AI &amp; robotics</text>
+<polyline class="lead-l" fill="none" points="999.6,150 999.6,244 880,244"/>
+<text class="call-l lbl" x="872" y="248" text-anchor="end"><tspan class="call-v">$14,990 &#183; 0.1%</tspan>  Smart Retail Solution</text>
+<g transform="translate(300 92)"><circle class="seal-ring" r="34"/><circle r="29" fill="none" stroke="var(--deep)" stroke-width=".6" stroke-dasharray="1.5 2"/><text class="seal-t" text-anchor="middle" y="-5">FORM 6-K</text><text class="seal-t" text-anchor="middle" y="5">SEP 23 2026</text><text class="seal-t" text-anchor="middle" y="15">UNAUDITED</text></g>
+<text class="call-l lbl" x="0" y="48">Total $18,270,590</text>
+</svg>
+      <figcaption class="strap-cap">Revenue by service type, six months ended Jun 30, 2026, unaudited, from the interim statements furnished on Form 6-K. Drawn for this concept page; the widths and shares are computed from the filed amounts. The filing&rsquo;s own table prints 1.3% for core AI &amp; robotics; its amount, $226,737, is 1.2% of the total. <span class="tg tg-c">Computed</span> On a phone the figures are in the table below.</figcaption>
+    </figure>
+    <div class="table-scroll strap-table reveal">
+      <table class="fin seg">
+        <caption>Revenue by service type, U.S. dollars, newest first</caption>
+        <thead><tr><th scope="col">Service line</th><th scope="col" class="num">H1 2026</th><th scope="col" class="num">Share</th><th scope="col" class="num">H1 2025 (restated)</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Cash-in-transit, non-dedicated vehicles</th><td class="num">6,699,793</td><td class="share">36.7%</td><td class="num">6,297,955</td></tr>
+          <tr><th scope="row">ATM management</th><td class="num">3,476,702</td><td class="share">19.0%</td><td class="num">3,349,420</td></tr>
+          <tr><th scope="row">Cash processing</th><td class="num">2,401,057</td><td class="share">13.1%</td><td class="num">2,133,633</td></tr>
+          <tr><th scope="row">Smart Cash Solution</th><td class="num">2,288,577</td><td class="share">12.5%</td><td class="num">2,176,285</td></tr>
+          <tr><th scope="row">Cash-in-transit, dedicated vehicles</th><td class="num">1,891,235</td><td class="share">10.4%</td><td class="num">1,914,764</td></tr>
+          <tr><th scope="row">Cash centre operations</th><td class="num">909,882</td><td class="share">5.0%</td><td class="num">903,368</td></tr>
+          <tr><th scope="row">Consolidated cash centre</th><td class="num">354,358</td><td class="share">1.9%</td><td class="num">285,110</td></tr>
+          <tr><th scope="row">Others</th><td class="num">7,259</td><td class="share">0.0%</td><td class="num">nil</td></tr>
+          <tr><th scope="row">Core AI &amp; robotics</th><td class="num">226,737</td><td class="share">1.2%</td><td class="num">107,470</td></tr>
+          <tr><th scope="row">Smart Retail Solution</th><td class="num">14,990</td><td class="share">0.1%</td><td class="num">nil</td></tr>
+          <tr class="tot"><th scope="row">Total</th><td class="num">18,270,590</td><td class="share">100.0%</td><td class="num">17,168,005</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="strap-cap" style="margin-top:14px">Two views exist in the filings. By reporting segment, AI&amp;Robotics was $241,727 of H1 2026 revenue (up 124.9%), which the company attributes partly to MGAI, acquired in March, which alone contributed $200,056 <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a>; without MGAI the segment would have been at most $41,671 <span class="tg tg-c">Computed</span>; by the company&rsquo;s own &ldquo;business metric&rdquo;, which since the end of 2025 puts Smart Cash Solution with AI and robotics, &ldquo;AI, RaaS &amp; Smart Solutions&rdquo; was $2,530,304 against $2,283,755. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+    <div class="geo">
+      <div class="geo-c reveal" style="--d:.02s"><span class="g-k">Anchor customer</span><p class="g-v">Since 2008</p><p>Government Savings Bank, a state-owned Thai bank, has been a customer since 2008; its agreement was renewed for three years to May 31, 2028. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></div>
+      <div class="geo-c reveal" style="--d:.06s"><span class="g-k">Recurring</span><p class="g-v">~97%</p><p>The H1 2026 release says &ldquo;approximately 97%&rdquo; with no base <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a>; the 20-F gives 97.7% of total revenue for GF Cash (CIT) in 2025 <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a>; the FY2025 release gives 99.96% for the Legacy Secured Logistics metric <span class="tg tg-cs">Company statement</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046210/ea0287109-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Apr 21, 2026</a>. The bases differ.</p></div>
+      <div class="geo-c reveal" style="--d:.10s"><span class="g-k">Management&rsquo;s metric</span><p class="g-v">+10.8%</p><p>&ldquo;AI, RaaS &amp; Smart Solutions&rdquo;, which counts Smart Cash Solution with AI and robotics, was $2,530,304 in H1 2026 against $2,283,755. <span class="tg tg-c">Computed</span> <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></p></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 06 FINANCIALS: statement table, newest first, continuing operations restated. ============ -->
+<section id="financials" class="sec-white" aria-labelledby="fin-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Financials</p>
+      <h2 id="fin-h">Financial results, as filed.</h2>
+      <p>IFRS, U.S. dollars. Earlier periods are as restated in later filings to remove Beijing Wanjia, which was sold on January 9, 2026 for $50,085 in cash, and Handshake, separated in 2024. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a></p>
+    </div>
+    <div class="table-scroll reveal">
+      <table class="fin is">
+        <caption>Statement of profit or loss, U.S. dollars</caption>
+        <thead><tr><th scope="col">Line</th><th scope="col" class="num">6 mo. to Jun 30, 2026</th><th scope="col" class="num">6 mo. to Jun 30, 2025</th><th scope="col" class="num">Year 2025</th><th scope="col" class="num">Year 2024</th><th scope="col" class="num">Year 2023</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Revenue</th><td class="num">18,270,590</td><td class="num">17,168,005</td><td class="num">35,232,701</td><td class="num">32,635,191</td><td class="num">32,649,834</td></tr>
+          <tr><th scope="row">Cost of sales</th><td class="num">(15,757,615)</td><td class="num">(14,649,027)</td><td class="num">(29,947,033)</td><td class="num">(27,719,050)</td><td class="num">(28,513,107)</td></tr>
+          <tr class="tot"><th scope="row">Gross profit</th><td class="num">2,512,975</td><td class="num">2,518,978</td><td class="num">5,285,668</td><td class="num">4,916,141</td><td class="num">4,136,727</td></tr>
+          <tr><th scope="row">Operating loss</th><td class="num">(3,275,598)</td><td class="num">(2,287,313)</td><td class="num">(5,877,324)</td><td class="num">(6,707,041)</td><td class="num">(28,398,075)</td></tr>
+          <tr><th scope="row">Net loss, continuing operations</th><td class="num">(3,120,475)</td><td class="num">(2,043,868)</td><td class="num">(5,286,128)</td><td class="num">(5,882,647)</td><td class="num">(28,742,278)</td></tr>
+          <tr><th scope="row">Net (loss)/profit, discontinued operations</th><td class="num">(7,171)</td><td class="num">(183,254)</td><td class="num">(1,356,923)</td><td class="num">37,947</td><td class="num">(847,104)</td></tr>
+          <tr class="tot"><th scope="row">Net loss</th><td class="num">(3,127,646)</td><td class="num">(2,227,122)</td><td class="num">(6,643,051)</td><td class="num">(5,844,700)</td><td class="num">(29,589,382)</td></tr>
+          <tr class="sub"><th scope="row">Attributable to equity holders</th><td class="num">(3,100,599)</td><td class="num">(2,236,077)</td><td class="num">(6,657,185)</td><td class="num">(5,864,165)</td><td class="num">(29,571,661)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="fin-notes">
+      <p><b>Periods and sources.</b> Half-years are unaudited, from the 6-K of Sep 23, 2026 <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a>; years are audited, from the 20-F of Apr 21, 2026 <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a>. As first filed, 2024 revenue was $36,347,373, including the general security business since sold. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390025036049/ea0236715-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 28, 2025</a></p>
+      </div>
+      <details class="fs-more">
+        <summary><span>Notes to the figures</span><span class="fs-s">What sits inside the loss, and the balance sheet</span></summary>
+        <div class="fs-in">
+          <p><b>What sits inside the loss.</b> 2023 includes $19.9M of impairments, allowances and provisions, among them $5,637,527 against a related-party receivable. In H1 2026, selling, general and administrative expenses rose 24.4%, mainly on penalties for prior-period withholding tax. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a> The $19.9M is computed from the filed lines. <span class="tg tg-c">Computed</span></p>
+          <p><b>Balance sheet.</b> Total assets $44,211,935 and total equity $30,568,232 at Jun 30, 2026, against $49,093,810 and $34,107,135 at Dec 31, 2025. No borrowings were outstanding at Dec 31, 2025; lease liabilities were $4,222,940 and the employee-benefit provision $6,493,677. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+        </div>
+      </details>
+    
+  </div>
+</section>
+
+
+<!-- ============ 07 FILINGS LEDGER (E7 timeline): selected 20-F and 6-K filings, newest first. ============ -->
+<section id="filings" class="sec-tint" aria-labelledby="fl-h">
+  <div class="wrap">
+    <div class="sec-head"><p class="eyebrow">News and filings</p><h2 id="fl-h">Results, launches and partnerships.</h2><p>Recent company releases and annual reports, newest first; every filing is on <a class="src" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001804469&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">EDGAR</a>; each line links to its source.</p></div>
+    <div class="news">
+      <section class="news-year"><h3 class="news-yr">2026</h3><ul class="news-list">
+        <li class="news-item reveal" style="--d:0.02s"><time datetime="2026-09-23">Sep 23, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">&ldquo;Guardforce AI Reports Interim Financial Results for the First Half of 2026&rdquo;<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+        <li class="news-item reveal" style="--d:0.05s"><time datetime="2026-04-21">Apr 21, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">Annual report on Form 20-F for the year ended Dec 31, 2025<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">20-F</span></li>
+        <li class="news-item reveal" style="--d:0.08s"><time datetime="2026-04-21">Apr 21, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046210/ea0287109-6k_guardforce.htm" target="_blank" rel="noopener">&ldquo;Guardforce AI Reports Full Year 2025 Financial Results&rdquo;<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+        <li class="news-item reveal" style="--d:0.11s"><time datetime="2026-03-18">Mar 18, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026030839/ea0282340-6k_guardforce.htm" target="_blank" rel="noopener">&ldquo;Guardforce AI Announces Closing of Strategic Acquisition of MGAI&rdquo;<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+        <li class="news-item reveal" style="--d:0.14s"><time datetime="2026-03-03">Mar 3, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026023123/ea0279868-6k_guardforce.htm" target="_blank" rel="noopener">&ldquo;Guardforce AI Announces Extension of Smart Retail Solutions Partnership with Major Global Sportswear Brand&rdquo;<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+        <li class="news-item reveal" style="--d:0.17s"><time datetime="2026-02-23">Feb 23, 2026</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026019312/ea0277948-6k_guardforce.htm" target="_blank" rel="noopener">&ldquo;Guardforce AI Announces Share Repurchase Program&rdquo;<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+      </ul></section>
+      <section class="news-year"><h3 class="news-yr">2025</h3><ul class="news-list">
+        <li class="news-item reveal" style="--d:0.02s"><time datetime="2025-11-20">Nov 20, 2025</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390025112812/ea0266495-6k_guardforce.htm" target="_blank" rel="noopener">DVGO Beta 2.0 launch and DVGO with Wishnote robotics in Thailand<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">6-K</span></li>
+        <li class="news-item reveal" style="--d:0.05s"><time datetime="2025-04-28">Apr 28, 2025</time><a class="news-link" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390025036049/ea0236715-20f_guardforce.htm" target="_blank" rel="noopener">Annual report on Form 20-F for the year ended Dec 31, 2024<span class="arw" aria-hidden="true">&rarr;</span></a><span class="news-tag">20-F</span></li>
+      </ul></section>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ 08 CONTACT: split. Orange half = investor alerts handoff; paper half = verified contacts. ============ -->
+<section id="contact" class="contact split" aria-labelledby="ct-h">
+  <div class="half orange">
+    <div class="half-in">
+      <p class="eyebrow">Investor alerts</p>
+      <h2 id="ct-h">Filings and releases by email.</h2>
+      <p>The company runs its own alert service on its investor site. This concept page collects nothing; the button opens the official sign-up page.</p>
+      <a class="btn btn-deep" href="https://ir.guardforceai.com/resources/email-alerts/" target="_blank" rel="noopener">Official email alerts <span class="arw" aria-hidden="true">&nearr;</span></a>
+    </div>
+  </div>
+  <div class="half sec-white">
+    <div class="half-in">
+      <div class="contact-grid">
+        <div class="contact-col"><h3>Investor relations</h3><p>Skyline Corporate Communications Group, LLC</p><a href="tel:+16468935835">(646) 893-5835</a><a href="mailto:guardforcerai@skylineccg.com">guardforcerai@skylineccg.com</a></div>
+        <div class="contact-col"><h3>Corporate communications</h3><p>Hu Yu</p><a href="mailto:yu.hu@guardforceai.com">yu.hu@guardforceai.com</a></div>
+        <div class="contact-col"><h3>Headquarters</h3><address>10 Anson Road, #28-01 International Plaza<br>Singapore 079903</address><a href="tel:+6567021179">+65 6702 1179</a><a href="mailto:info@guardforceai.com">info@guardforceai.com</a></div>
+        <div class="contact-col"><h3>Filings</h3><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001804469&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">SEC EDGAR, CIK 0001804469</a><a href="https://ir.guardforceai.com/" target="_blank" rel="noopener">ir.guardforceai.com</a></div>
+      </div>
+      <p class="strap-cap" style="margin-top:22px">IR and corporate-communications contacts as printed on ir.guardforceai.com on Oct 24, 2026 <span class="tg tg-s">Company site</span>; address, telephone and company email from the 20-F. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 05 READ FIRST (gravest band): what an investor must weigh, in the filings' own words. ============ -->
+<section id="disclosures" class="grave" aria-labelledby="rf-h">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Risk disclosures</p>
+      <h2 id="rf-h">Material risks, in the filings&rsquo; words.</h2>
+      <p>An investment in Guardforce AI involves risk. These are the principal items the company&rsquo;s filings describe; the full risk factors are in the 20-F.</p>
+    </div>
+    <div class="flags">
+      <div class="flag reveal" style="--d:.02s"><span class="fl-k">Nasdaq listing</span><h3>Below the $1.00 minimum bid since late 2025</h3><p>Nasdaq&rsquo;s deficiency letter is dated Dec 12, 2025. A second 180-day period runs to Dec 7, 2026: &ldquo;In the event the Company does not regain compliance by December 7, 2026, the Company may face delisting.&rdquo; <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390025122856/ea0270028-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Dec 17, 2025</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026068247/ea0294642-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Jun 12, 2026</a></p><p>The proxy of Oct 2, 2026: &ldquo;As of October 2, 2026, the Company has not yet regained the compliance with the Bid Price Rule.&rdquo; <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026106384/ea0307300-6k_guardforce.htm" target="_blank" rel="noopener">6-K proxy, Oct 2, 2026</a></p></div>
+      <div class="flag reveal" style="--d:.06s"><span class="fl-k">Meeting, Oct 27, 2026</span><h3>A 1-for-40 consolidation and a dual-class structure</h3><p>Resolution 1 consolidates every 40 shares into one, then reduces par value to US$0.001. Resolution 2 creates Class A shares with one vote and Class B shares with 20; the 80,034 post-consolidation shares of the CEO and Chair, Lei Wang, would become Class B. It also raises the authorised share count from 300,000,000 to 36,000,000,000 while 799,233 shares would be in issue. Resolution 3 moves the equity plan limit from 15% of all ordinary shares to 20% of Class A shares. Resolutions 1 and 2 need a two-thirds vote. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026106384/ea0307300-6k_guardforce.htm" target="_blank" rel="noopener">6-K proxy, Oct 2, 2026</a> The company made an earlier 1-for-40 consolidation in 2023. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p><p>Computed from the proxy table, not stated in it: 80,034 Class B shares at 20 votes would carry about 69.0% of the votes on about 10.0% of the 799,233 post-consolidation shares. <span class="tg tg-c">Computed</span> The 20-F also records an irrevocable proxy for Ms. Wang over 2,947,150 other shares, not counted in that figure. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></div>
+      <div class="flag reveal" style="--d:.10s"><span class="fl-k">Concentration</span><h3>Three customers, 58.2% of revenue</h3><p>&ldquo;We have substantial customer concentration, with a limited number of customers accounting for a substantial portion of our recent revenues.&rdquo; The largest, Government Savings Bank, supplied 23.9% in 2025, and Thailand 99.6% ($35,086,635; other countries $146,066). <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></div>
+      <div class="flag reveal" style="--d:.14s"><span class="fl-k">Losses</span><h3>An accumulated deficit of $74.0M</h3><p>At Jun 30, 2026, per the interim notes, after a 2025 operating loss of $5.9M. Management concludes it has &ldquo;sufficient available financial resources&rdquo; for at least twelve months, and the auditor&rsquo;s opinion on 2025 carries no going-concern paragraph. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p><p>In 2025 the Secured Logistics segment earned an operating profit of $966,279, while AI&amp;Robotics lost $1,587,863 and corporate costs were $5,255,740; operating cash flow was an outflow of $1,305,196. &ldquo;The principal sources of funding have historically been cash contributions from equity financing.&rdquo; <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p><p>The risk factors still say: &ldquo;Our negative operating profits may raise substantial doubt regarding our ability to continue as a going concern.&rdquo; <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></div>
+      <div class="flag reveal" style="--d:.18s"><span class="fl-k">Dilution</span><h3>Share count up 79% in 21 months</h3><p>17,808,947 shares at Dec 31, 2024; 31,958,004 at Sep 28, 2026. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026106384/ea0307300-6k_guardforce.htm" target="_blank" rel="noopener">6-K proxy, Oct 2, 2026</a> The at-the-market programme with H.C. Wainwright sold 13,028,854 shares from July 2, 2024 to Sep 23, 2026, of which 7,502,220 were issued before Dec 31, 2024. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390024058573/ea0208864-6k_guard.htm" target="_blank" rel="noopener">6-K, Jul 2, 2024</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2026</a> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a> Inside the window the rise is mostly 5,526,634 ATM shares, 5,000,000 MGAI consideration shares and share awards, less a buyback. <span class="tg tg-c">Computed</span></p></div>
+      <div class="flag reveal" style="--d:.22s"><span class="fl-k">Control and pay</span><h3>A rights plan and a CEO consulting agreement</h3><p>A shareholder rights plan adopted Dec 15, 2025 dilutes anyone who acquires 10% or more of the voting power without Board approval; founders have an initial 25% exempted percentage. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390025123819/ea0270290-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Dec 19, 2025</a> The CEO&rsquo;s consulting agreement, approved Sep 15, 2025, pays an annual cash fee of US$650,000 plus share awards and allowances; termination without cause pays a lump sum of five years&rsquo; fee and target bonus, with tax gross-up payments. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390025090346/ea0258358-6k_guardforce.htm" target="_blank" rel="noopener">6-K, Sep 23, 2025</a></p></div>
+    <div class="flag reveal" style="--d:.26s"><span class="fl-k">Core market and brand</span><h3>Falling cash use, and an unregistered brand</h3><p>&ldquo;Decreasing use of cash could have a negative impact on our business.&rdquo; Banking customers supplied 54.8% of secured-logistics revenue in 2025, against 57.8% in 2024 and 61.5% in 2023. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p><p>The GFCS brand is not yet a registered trademark in Thailand. <span class="tg tg-f">Filed</span> <a class="src" href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">20-F, Apr 21, 2026</a></p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+<div class="foot-brand"><img src="img/logo.png" width="508" height="152" alt="Guardforce AI"></div>
+<ul class="footer-links">
+  <li><a href="https://ir.guardforceai.com/" target="_blank" rel="noopener">Official investor relations</a></li>
+  <li><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0001804469&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">SEC EDGAR filings, CIK 0001804469</a></li>
+  <li><a href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026046137/ea0284325-20f_guardforce.htm" target="_blank" rel="noopener">Form 20-F for 2025</a></li>
+  <li><a href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026102608/ea0301937-6k_guardforce.htm" target="_blank" rel="noopener">Interim results, Form 6-K, Sep 23, 2026</a></li>
+  <li><a href="https://www.sec.gov/Archives/edgar/data/1804469/000121390026106384/ea0307300-6k_guardforce.htm" target="_blank" rel="noopener">Meeting notice and proxy, Form 6-K, Oct 2, 2026</a></li>
+</ul>
+<p class="method">How this page was made: figures come from the company&rsquo;s Forms 20-F for 2025 and 2024 and its Forms 6-K listed in the filings section, read on October 24 and 25, 2026. Statements are labelled filed, company statement, computed or company site. The company is a foreign private issuer reporting under IFRS in U.S. dollars, so the notice below that mentions &ldquo;the most recent 10-K and 10-Q&rdquo; should be read as its most recent Form 20-F and its Forms 6-K. The results of the October 27, 2026 meeting were not known when this page was made. Statements and photographs from guardforceai.com and ir.guardforceai.com were read on October 24, 2026 and may since have changed; the revenue strap is drawn for this concept page and is not the company&rsquo;s artwork. This page shows no market quote. Nothing here is investment advice.</p>
+    <p class="fls"><b>About this page:</b> This is an independent design concept and is not the official Guardforce AI investor relations website. It is not affiliated with, endorsed by, or maintained by Guardforce AI Co., Limited. Figures were assembled from public materials at a point in time and may be outdated; verify every figure against the company's official SEC filings. For official information, visit <a href="https://ir.guardforceai.com/">ir.guardforceai.com</a>.</p>
+    <p class="fls"><b>Forward-Looking Statements:</b> This website contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995, including statements regarding its ability to regain compliance with the Nasdaq minimum bid price rule and keep its listing, the outcome and effects of the proposed share consolidation, capital reduction and dual-class structure, its dependence on a small number of Thai banking and retail customers, the declining use of cash in Thailand, its continuing operating losses and its need for further financing, dilution from share issuances, its ability to build revenue from AI, robotics and the MGAI business it acquired, and political, legal and economic conditions in Thailand, Hong Kong and China. These statements involve known and unknown risks, uncertainties, and other factors that may cause actual results to differ materially from those expressed or implied. We undertake no obligation to update any forward-looking statements except as required by law. See the company's SEC filings, including its most recent 10-K and 10-Q, for a full discussion of risk factors.</p>
+    <p class="market-note">Market data, where shown, is delayed at least 15 minutes and provided for this concept only. Real-time quotes and official figures are available through the company's investor relations site and SEC filings. This concept page shows no live or delayed share quote. Amounts are U.S. dollars under IFRS as filed.</p>
+  </div>
+</footer>
+
+<script>
+/* mediaconsole motion: inlined by scaffold.mjs at the end of body, identical on every page; never edit it.
+   Sets html.js, runs the ONE reveal observer (fires the mc:reveal hook), scroll-spy, hamburger aria, and the
+   #hero-motif .paused toggle (off-screen, hidden tab, [data-motif-toggle]). Null-guarded: a failure reveals everything. */
+(function(){
+  var d=document,root=d.documentElement;
+  root.classList.add('js');
+  var reduce=!!(window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  var hasIO='IntersectionObserver' in window;
+  function fire(el,name,detail){
+    var ev;
+    try{ev=new CustomEvent(name,{bubbles:true,detail:detail})}
+    catch(x){ev=d.createEvent('CustomEvent');ev.initCustomEvent(name,true,false,detail)}
+    el.dispatchEvent(ev);
+  }
+  /* mc:reveal fires ONCE per .reveal element, bubbling, as .in lands; detail.reduced is true under reduced motion.
+     Components hook here (counters.js) instead of adding a second observer. */
+  function show(el){
+    if(el.classList.contains('in'))return;
+    el.classList.add('in');
+    fire(el,'mc:reveal',{reduced:reduce});
+  }
+  try{
+    var els=[].slice.call(d.querySelectorAll('.reveal'));
+    if(reduce||!hasIO){els.forEach(show)}
+    else{
+      var io=new IntersectionObserver(function(en){en.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);show(e.target)}})},{threshold:.12});
+      els.forEach(function(el){io.observe(el)});
+    }
+  }catch(err){root.classList.remove('js');[].forEach.call(d.querySelectorAll('.reveal'),function(el){el.classList.add('in')})}
+  try{
+    var burger=d.querySelector('.nav-burger'),links=d.getElementById('nav-links'),nav=d.querySelector('.site-nav');
+    if(burger&&links){
+      var setOpen=function(o){links.classList.toggle('open',o);burger.setAttribute('aria-expanded',o?'true':'false')};
+      burger.addEventListener('click',function(){setOpen(!links.classList.contains('open'))});
+      links.addEventListener('click',function(e){if(e.target.closest&&e.target.closest('a'))setOpen(false)});
+      d.addEventListener('keydown',function(e){if((e.key==='Escape'||e.key==='Esc')&&links.classList.contains('open')){setOpen(false);burger.focus()}});
+    }
+    if(nav){var onScroll=function(){nav.classList.toggle('scrolled',window.scrollY>8)};window.addEventListener('scroll',onScroll,{passive:true});onScroll()}
+  }catch(err){}
+  try{
+    var na=[].slice.call(d.querySelectorAll('.nav-links a[href^="#"]:not(.btn)'));
+    if(na.length&&hasIO){
+      var so=new IntersectionObserver(function(en){en.forEach(function(e){
+        if(!e.isIntersecting)return;var id='#'+e.target.id;
+        na.forEach(function(a){var on=a.getAttribute('href')===id;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
+      })},{rootMargin:'-40% 0px -55% 0px'});
+      na.forEach(function(a){var t=d.getElementById(a.getAttribute('href').slice(1));if(t)so.observe(t)});
+    }
+  }catch(err){}
+  /* hero motif pause: toggles .paused on #hero-motif (off-screen, hidden tab, or the user's [data-motif-toggle]).
+     The class is the whole contract: substrate CSS pauses every CSS animation inside it; JS motifs watch it (wave.js). */
+  try{
+    var motif=d.getElementById('hero-motif');
+    if(motif&&!reduce){
+      var hero=d.getElementById('hero')||motif,hv=true,user=false,tg=[].slice.call(d.querySelectorAll('[data-motif-toggle]'));
+      var sm=function(){var p=user||!hv||d.hidden;motif.classList.toggle('paused',p)};
+      if(hasIO)new IntersectionObserver(function(en){en.forEach(function(e){hv=e.isIntersecting});sm()},{threshold:0}).observe(hero);
+      d.addEventListener('visibilitychange',sm);
+      tg.forEach(function(b){
+        b.setAttribute('aria-pressed','false');
+        b.addEventListener('click',function(){user=!user;tg.forEach(function(t){t.setAttribute('aria-pressed',user?'true':'false')});sm()});
+      });
+    }
+  }catch(err){}
+})();
+</script>
+<script>
+/* Guardforce AI: the hero pause control. motion.js already pauses #hero-motif off screen and when the tab is hidden;
+   this adds the visitor's own switch (WCAG 2.2.2) and keeps its label and state in step. */
+(function () {
+  var btn = document.querySelector('[data-motif-toggle]');
+  var motif = document.getElementById('hero-motif');
+  if (!btn || !motif) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { btn.hidden = true; return; }
+  btn.addEventListener('click', function () {
+    var on = btn.getAttribute('aria-pressed') !== 'true';
+    btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+    btn.textContent = on ? 'Resume motion' : 'Pause motion';
+    motif.classList.toggle('user-paused', on);
+  });
+})();
+</script>
+</body>
+</html>
